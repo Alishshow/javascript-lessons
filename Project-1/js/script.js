@@ -20,9 +20,4 @@ let expenses = {
     };
     console.log(typeof(answer));
 alert(money / 30);
-console.log(money);
-console.log(money/30);
-console.log(answer);
-console.log(answer2);
-console.log(expenses);
 
