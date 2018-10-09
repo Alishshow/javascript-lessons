@@ -18,6 +18,5 @@ let expenses = {
         1: answer,
         2: answer2
     };
-    console.log(typeof(answer));
 alert(money / 30);
 
