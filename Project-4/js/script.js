@@ -26,7 +26,7 @@ let appData = {
                 console.log("done");
                 appData.expenses[a] = b;
             } else {
-                i = i - 1;
+                i = i--;
             }
         }
     },
@@ -61,15 +61,24 @@ let appData = {
         }
     },
     chooseIncome: function() {
-        let items = prompt('Что принесет дополнительный доход? (Перечислите через запятую)', '');
-        appData.timeData.income = items.split(', ');
-        while(string(items) || items == "" || items == null) {
-            items = prompt('Что принесет дополнительный доход? (Перечислите через запятую)', '');
-        appData.income.push(prompt('Может что-то еще?'));
-        appData.income.sort();
+        let items = [prompt('Спосообы доп. заработка. (Перечислите через запятую)', '')];
+        while(items == "" || items == null) {
+            items = prompt('Спосообы доп. заработка. (Перечислите через запятую)', '');
         }
+        appData.income.push(prompt('Может что-то еще?'));
+        // appData.income = items.split(', ');
+        appData.income.sort();
+        items.forEach(function(item) {
+            alert("Способы доп. заработка: " + item);
+        });
     }
 };
+appData.chooseIncome();
+for (let key in appData) {
+    console.log('Наша программа включает в себя данные: ' + appData[key]);
+}
+
+
 
 
 
