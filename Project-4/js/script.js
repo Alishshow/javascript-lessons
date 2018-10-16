@@ -61,15 +61,20 @@ let appData = {
         }
     },
     chooseIncome: function() {
-        let items = [prompt('Спосообы доп. заработка. (Перечислите через запятую)', '')];
-        while(items == "" || items == null) {
+        let items = prompt('Спосообы доп. заработка. (Перечислите через запятую)', '');
+        while(!isNaN(items) || items == "" || items == null) {
             items = prompt('Спосообы доп. заработка. (Перечислите через запятую)', '');
         }
-        appData.income.push(prompt('Может что-то еще?'));
-        // appData.income = items.split(', ');
+        appData.income = items.split(', ');
+        let itemsAdd = prompt('Может что-то еще?');
+        while(!isNaN(itemsAdd) || itemsAdd == "" || itemsAdd == null) {
+            itemsAdd = prompt('Может что-то еще?');
+        }
+        appData.income.push(itemsAdd);
         appData.income.sort();
-        items.forEach(function(item) {
-            alert("Способы доп. заработка: " + item);
+        document.body.innerHTML += '<div style="font-size: 16px">Способы доп. заработка: </div>';
+        appData.income.forEach(function(element, index) {
+            document.body.innerHTML += '<div style="font-size: 16px">' + (index + 1) + ') ' + element + '</div>';
         });
     }
 };
@@ -77,8 +82,7 @@ appData.chooseIncome();
 for (let key in appData) {
     console.log('Наша программа включает в себя данные: ' + appData[key]);
 }
-
-
+// "Способы доп. заработка: "
 
 
 
