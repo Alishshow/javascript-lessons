@@ -8,7 +8,7 @@ menu.insertBefore(newMenu, menu.children[4]);
 // Готово
 
 // Заменить картинку заднего фона на другую из папки img
-document.body.style.background = 'url(../img/apple_true.jpg) center no-repeat';
+document.body.style.background = 'url(img/apple_true.jpg) center no-repeat';
 document.body.style.backgroundSize = 'cover';
 // Готово
 
