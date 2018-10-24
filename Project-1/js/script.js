@@ -10,13 +10,14 @@ let appData = {
     income: [],
     savings: false
 };
-let answer = prompt("Введите обязательную статью расходов в этом месяце", "Еда"),
-    answer2 = prompt("Во сколько обойдется?", "20000");
-    answer = prompt("Введите обязательную статью расходов в этом месяце", "Еда"),
-    answer2 = prompt("Во сколько обойдется?", "200000");
-let expenses = {
-        1: answer,
-        2: answer2
-    };
 alert(money / 30);
-
+for (let i = 0; i < 2; i++) {
+    let answerFirst = prompt("Введите обязательную статью расходов в этом месяце", ''),
+        answerSecond = prompt("Во сколько обойдется?", '');
+        
+let expenses = {
+        [i]: answerFirst,
+        [i]: answerSecond
+    };
+console.log(expenses);
+};
