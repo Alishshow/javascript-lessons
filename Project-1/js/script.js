@@ -15,9 +15,9 @@ for (let i = 0; i < 2; i++) {
     let answerFirst = prompt("Введите обязательную статью расходов в этом месяце", ''),
         answerSecond = prompt("Во сколько обойдется?", '');
         
-let expenses = {
-        [i]: answerFirst,
-        [i]: answerSecond
-    };
-console.log(expenses);
-};
+// appData.expenses[i] = {
+//         answerFirst: answerSecond
+//         };
+appData.expenses[i] = (answerFirst + ' : ' + answerSecond);
+}
+console.log(appData.expenses);

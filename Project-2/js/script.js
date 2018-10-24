@@ -14,14 +14,15 @@ for (let i = 0; i < 2; i++) {
     let answerFirst = prompt("Введите обязательную статью расходов в этом месяце", ''),
         answerSecond = prompt("Во сколько обойдется?", '');
 
-    if ( (typeof(answerFirst))=== 'string' && (typeof(answerFirst)) != null && (typeof(answerSecond)) != null 
-        && answerFirst != '' && answerSecond != '' && answerFirst.length < 50) {
+    if ( (typeof(answerFirst))=== 'string' && (typeof(answerFirst)) != null && (typeof(answerSecond)) != null && answerFirst != '' && answerSecond != '' && answerFirst.length < 50) {
         console.log("done");
-        appData.expenses[answerFirst] = answerSecond;
+        appData.expenses[i] = {
+            answerFirst: answerSecond
+            };
     } else {
 
     }
-};
+}
 
 // let i = 0
 // while (i < 2) {
@@ -62,5 +63,5 @@ if(appData.moneyPerDay < 100) {
 } else if (appData.moneyperDay > 2000) {
     console.log("Высокий уровень достатка");    
 } else {
-    console.log("Произошла ошибка")
-};
+    console.log("Произошла ошибка");
+}
