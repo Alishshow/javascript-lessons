@@ -70,7 +70,7 @@ checkSavings();
 function chooseOptExpenses () {
     for (let i = 0; i < 3; i++) {
         let oexp = prompt("Статья необязательных расходов?", "");
-        appData.optionalExpenses[i]: {[i+1]: oexp};
+        appData.optionalExpenses[i] = {[i+1]: oexp};
     }
 }
 chooseOptExpenses();
