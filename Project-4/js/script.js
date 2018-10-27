@@ -58,7 +58,7 @@ let appData = {
     chooseOptExpenses: function() {
         for (let i = 0; i < 3; i++) {
             let oexp = prompt("Статья необязательных расходов?", "");
-            appData.optionalExpenses[i] = oexp;
+            appData.optionalExpenses[i] = {[i+1]: oexp};
         }
     },
     chooseIncome: function() {
